@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="css">
+    <title>e_commerse_admin</title>
+</head>
+
+
+<body>
+    <nav class="navbar">Cara Admin Panel</nav>
+    <section>
+        <div id="products">
+            <a href="#">Products</a>
+        </div>
+    </section>
+    <section class="form-section">
+
+        <div class="form-box">
+
+            <div class="container">
+                <form id="yourFormId">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">Product Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Enter Product Name.." required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Price</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" id="lname" name="lastname" placeholder="Enter Price" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Size</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="country" name="country">
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="S">S</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <input type="submit" id="sub" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <button id="logoutButton">Logout</button>
+   
+    <section id="pro-list">
+        <div id="pro">
+            <a href="#">Product List</a>
+            <div id="pro-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Size</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="form-popup" id="myForm">
+        <form id="popup-form-container" class="popup-form-container">
+            <h1>Update Here</h1>
+            
+            <label for="id"><b>ID</b></label>
+            <input type="number" id="pro-id" placeholder="Enter ID" name="id" required>
+
+            <label for="name"><b>Product Name</b></label>
+            <input type="text" id="updated-name" placeholder="Enter new name" name="name" required>
+
+            <label for="price"><b>Price</b></label>
+            <input type="number" id="updated-price" placeholder="New price" name="price" required>
+
+            <label for="size"><b>Size</b></label>
+            <select name="size" id="size">
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="S">S</option>
+            </select>
+
+            <button type="submit" class="btn" id="update-detail-button">submit update</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <script> function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }</script>
+    <script src="./main.js" defer></script>
+</body>
+
+</html>
